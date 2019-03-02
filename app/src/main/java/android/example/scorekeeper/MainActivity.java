@@ -7,8 +7,8 @@ import android.view.View;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-    int scoreTeamA = 0;
-    int scoreTeamB =0;
+    int scoreTeamRed = 0;
+    int scoreTeamBlue =0;
 
 
     @Override
@@ -20,46 +20,46 @@ public class MainActivity extends AppCompatActivity {
     }
     public void addTwoForTeamA(View v) {
 
-        scoreTeamA = scoreTeamA + 2;
-        displayForTeamA(scoreTeamA);
+        scoreTeamRed = scoreTeamRed + 2;
+        displayForTeamRed(scoreTeamRed);
     }
     //dispaly for b
-    public void addTwoForTeamB(View v){
-        scoreTeamB = scoreTeamB + 2;
-        displayForTeamB(scoreTeamB);
+    public void addTwoForTeamBlue(View v){
+        scoreTeamBlue = scoreTeamBlue + 2;
+        displayForTeamBlue(scoreTeamBlue);
 
     }
-    public void addOneForTeamA(View v) {
+    public void addOneForTeamRed(View v) {
 
-        scoreTeamA = scoreTeamA + 1;
-        displayForTeamA(scoreTeamA);
+        scoreTeamRed = scoreTeamRed + 1;
+        displayForTeamRed(scoreTeamRed);
     }
 
-    public void addThreeForTeamB(View v){
-        scoreTeamB = scoreTeamB + 3;
-        displayForTeamB(scoreTeamB);
-
-    }
-
-    public void addThreeForTeamA(View v) {
-
-        scoreTeamA = scoreTeamA + 3;
-        displayForTeamA(scoreTeamA);
+    public void addThreeForTeamBlue(View v){
+        scoreTeamBlue = scoreTeamBlue + 3;
+        displayForTeamBlue(scoreTeamBlue);
 
     }
 
-    public void addOneForTeamB(View v){
-        scoreTeamB = scoreTeamB + 1;
-        displayForTeamB(scoreTeamB);
+    public void addThreeForTeamRed(View v) {
+
+        scoreTeamRed = scoreTeamRed + 3;
+        displayForTeamRed(scoreTeamRed);
+
+    }
+
+    public void addOneForTeamBlue(View v){
+        scoreTeamBlue = scoreTeamBlue + 1;
+        displayForTeamBlue(scoreTeamBlue);
 
     }
 
     //reset button sets back to zero
     public void resetScore(View v){
-        scoreTeamA = 0;
-        scoreTeamB = 0;
-        displayForTeamA(scoreTeamA);
-        displayForTeamB(scoreTeamB);
+        scoreTeamRed = 0;
+        scoreTeamBlue = 0;
+        displayForTeamRed(scoreTeamRed);
+        displayForTeamBlue(scoreTeamBlue);
 
 
 
@@ -71,17 +71,17 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Displays the given score for Team A.
+     * Displays the given score for Team red.
      */
-    public void displayForTeamA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_a_score);
+    public void displayForTeamRed(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.team_red_score);
         scoreView.setText(String.valueOf(score));
     }
     /**
      * Displays the given score for Team B.
      */
-    public void displayForTeamB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.team_b_score);
+    public void displayForTeamBlue(int score) {
+        TextView scoreView = (TextView) findViewById(R.id.team_blue_score);
         scoreView.setText(String.valueOf(score));
     }
 
